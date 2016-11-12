@@ -8,7 +8,6 @@ from flask_restful import reqparse, Api, Resource
 
 language = os.environ['LANG'] or 'en'
 
-print("Loading Language Model for '%s'..." % language)
 nlp = spacy.load(language)
 print("Language Model for '%s' loaded!" % language)
 
