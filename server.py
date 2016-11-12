@@ -73,7 +73,8 @@ class Spacy(Resource):
         ret = {
             'numOfSentences': len(list(doc.sents)),
             'numOfTokens': len(list(doc)),
-            'sentences': []
+            'sentences': [],
+            'ents': [ent for ent in doc.ents]
         }
 
         for sentence in doc.sents:
